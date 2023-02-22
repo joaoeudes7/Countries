@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CountriesApi"
 include ':lib'
+include ':Sample'
