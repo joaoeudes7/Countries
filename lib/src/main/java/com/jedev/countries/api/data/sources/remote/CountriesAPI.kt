@@ -1,8 +1,9 @@
 package com.jedev.countries.api.data.sources.remote
 
-import com.jedev.countries.api.models.CountryJsonObject
+import com.jedev.countries.api.models.CountriesJsonRes
+import com.jedev.countries.api.models.CountryJsonRes
 import retrofit2.http.GET
-import retrofit2.http.Path
+import retrofit2.http.Query
 
 
 interface CountriesAPI {
@@ -13,61 +14,61 @@ interface CountriesAPI {
 
     @GET("all")
     suspend fun getAll(
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("name/{name}")
     suspend fun getByName(
-        @Path("name") name: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("name") name: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("alpha/{code}")
     suspend fun getByCode(
-        @Path("code") code: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("code") code: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("currency/{currency}")
     suspend fun getByCurrency(
-        @Path("currency") currency: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("currency") currency: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("lang/{language}")
     suspend fun getByLanguage(
-        @Path("language") language: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("language") language: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("capital/{capital}")
     suspend fun getByCapital(
-        @Path("capital") capital: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("capital") capital: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("callingcode/{callingCode}")
     suspend fun getByCallingCode(
-        @Path("callingCode") callingCode: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("callingCode") callingCode: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("region/{region}")
     suspend fun getByRegion(
-        @Path("region") region: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("region") region: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("subregion/{subregion}")
     suspend fun getBySubregion(
-        @Path("subregion") subregion: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("subregion") subregion: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
     @GET("regionalbloc/{regionalBloc}")
     suspend fun getByRegionalBloc(
-        @Path("regionalBloc") regionalBloc: String,
-        @Path("filters") filters: String?
-    ): List<CountryJsonObject>
+        @Query("regionalBloc") regionalBloc: String,
+        @Query("filters") filters: String?
+    ): CountriesJsonRes
 
 }

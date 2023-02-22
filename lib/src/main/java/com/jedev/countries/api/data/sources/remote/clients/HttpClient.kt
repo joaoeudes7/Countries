@@ -63,7 +63,7 @@ class HttpClient(
             }
 
         if (internalMap.converterFactories().isEmpty()) {
-            val gson = GsonBuilder().setLenient().create()
+            val gson = GsonBuilder().setLenient().serializeNulls().create()
             val converterFactory = GsonConverterFactory.create(gson)
 
             addConverterFactory(converterFactory)

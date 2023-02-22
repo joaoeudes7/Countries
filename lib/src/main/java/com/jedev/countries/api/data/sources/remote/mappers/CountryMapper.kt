@@ -1,19 +1,18 @@
 package com.jedev.countries.api.data.sources.remote.mappers
 
-import com.jedev.countries.api.models.CountryJsonObject
+import com.jedev.countries.api.models.CountryJsonRes
 import com.jedev.countries.api.models.CountryModel
 
-fun CountryJsonObject.toCountryModel() = CountryModel(
-    name = name,
+fun CountryJsonRes.toCountryModel() = CountryModel(
+    name = name.common,
     region = region,
     population = population,
-    currencies = currencies.values.toList(),
-    languages = languages.values.toList(),
     flag = flag,
     area = area,
     latlng = latlng,
     tld = tld,
-    idd = idd,
+    idd = idd?.iddGeneral,
     altSpellings = altSpellings,
-    postalCode = postalCode
+    postalCode = postalCode?.format,
+    languages = languages?.map { it.value }
 )

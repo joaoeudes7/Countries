@@ -1,15 +1,17 @@
 package com.jedev.countries.api.models
 
+import com.google.gson.annotations.SerializedName
 
-data class CountryJsonObject (
-    val postalCode: PostalCode,
-    val name: Name,
-    val tld: List<String>,
-    val currencies: Map<String, Currency>,
-    val idd: Idd,
+typealias CountriesJsonRes = List<CountryJsonRes>
+data class CountryJsonRes (
+    @SerializedName("postalCode")
+    val postalCode: PostalCodeJsonRes? = null,
+    val name: NameJsonRes,
+    val tld: List<String>? = null,
+    val idd: IddResJson? = null,
     val altSpellings: List<String>,
+    val languages: Map<String, String>?,
     val region: String,
-    val languages: Map<String, String>,
     val latlng: List<Double>,
     val area: Double,
     val flag: String,
@@ -21,23 +23,25 @@ data class Currency (
     val symbol: String
 )
 
-data class Idd (
+data class IddResJson (
     val root: String,
-    val suffixes: List<String>
-)
+    val suffixes: List<String>?
+) {
+    val iddGeneral: String
+        get() = root + (suffixes?.firstOrNull() ?: "")
+}
 
-data class Name (
+data class NameJsonRes (
     val common: String,
     val official: String,
-    val nativeName: Map<String, NativeName>
+    val nativeName: Map<String, NativeNameJsonRes>
 )
-
-data class NativeName (
+data class NativeNameJsonRes (
     val official: String,
     val common: String
 )
 
-data class PostalCode (
+data class PostalCodeJsonRes (
     val format: String? = null,
     val regex: String? = null
 )

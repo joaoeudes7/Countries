@@ -6,11 +6,11 @@ import android.app.Application
 import com.jedev.countries.api.data.sources.remote.CountriesAPI
 import com.jedev.countries.api.data.sources.remote.clients.HttpClient
 import com.jedev.countries.api.data.sources.remote.mappers.toCountryModel
-import com.jedev.countries.api.models.CountryJsonObject
+import com.jedev.countries.api.models.CountryJsonRes
 import com.jedev.countries.api.models.CountryModel
 import kotlin.reflect.KProperty1
 
-typealias FilterProperty = KProperty1<CountryJsonObject, *>
+typealias FilterProperty = KProperty1<CountryJsonRes, *>
 
 class CountriesClient(application: Application) {
 
