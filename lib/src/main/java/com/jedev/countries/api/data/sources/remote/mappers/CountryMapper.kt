@@ -1,6 +1,6 @@
 package com.jedev.countries.api.data.sources.remote.mappers
 
-import com.jedev.countries.api.models.CountryJsonRes
+import com.jedev.countries.api.data.sources.remote.entities.CountryJsonRes
 import com.jedev.countries.api.models.CountryModel
 
 fun CountryJsonRes.toCountryModel() = CountryModel(
@@ -9,7 +9,7 @@ fun CountryJsonRes.toCountryModel() = CountryModel(
     population = population,
     flag = flag,
     area = area,
-    latlng = latlng,
+    latLng = latlng,
     tld = tld,
     idd = idd?.iddGeneral,
     altSpellings = altSpellings,

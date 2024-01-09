@@ -1,12 +1,10 @@
-@file:Suppress("unused")
-
 package com.jedev.countries.api
 
 import android.app.Application
 import com.jedev.countries.api.data.sources.remote.CountriesAPI
 import com.jedev.countries.api.data.sources.remote.clients.HttpClient
 import com.jedev.countries.api.data.sources.remote.mappers.toCountryModel
-import com.jedev.countries.api.models.CountryJsonRes
+import com.jedev.countries.api.data.sources.remote.entities.CountryJsonRes
 import com.jedev.countries.api.models.CountryModel
 import kotlin.reflect.KProperty1
 
@@ -16,6 +14,7 @@ class CountriesClient(application: Application) {
 
     private val countriesApi by lazy {
         HttpClient<CountriesAPI>(application) {
+            enabledCache = true
             setBaseUrl(CountriesAPI.BASE_URL_V3_1)
         }
     }

@@ -1,7 +1,6 @@
 package com.jedev.countries.api.data.sources.remote
 
-import com.jedev.countries.api.models.CountriesJsonRes
-import com.jedev.countries.api.models.CountryJsonRes
+import com.jedev.countries.api.data.sources.remote.entities.CountriesJsonRes
 import retrofit2.http.GET
 import retrofit2.http.Query
 
