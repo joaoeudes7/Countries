@@ -1,10 +1,10 @@
 ## Countries Api 
 ### Android Library | Kotlin
 
-##### How use?
-A sample Android Library to query countries and others info's
+#### Whats is that?
+A sample Android Library to query countries and others info's by https://restcountries.com v3.1
 
-##### How use?
+#### How use?
 
 Add the repository on gradle of project and implements on module
 ```groovy
@@ -22,5 +22,7 @@ then invoke the client on your code
 ```kotlin
     private val apiCountries = CountriesClient(application)
 ```
+
+Thanks https://restcountries.com
 
 Enjoy it or hate :)
