@@ -15,7 +15,7 @@ Add the repository on gradle of project and implements on module
         }
     }
 
-    implementation("com.jedev:countries-api:<version>")
+    implementation("com.jedev:countries-api:<version>") // or api (...) to module
 ```
 
 then invoke the client on your code
