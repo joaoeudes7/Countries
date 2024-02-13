@@ -19,8 +19,10 @@ class CountryModel(
     val continents: List<EnumContinentModel>,
     val subregion: String?,
     val maps: MapsModel,
+    val currencies: List<CurrencyModel>,
     val timezones: List<String>,
-    val capitalLatLng: List<Double>?
+    val capitalLatLng: List<Double>?,
+    val fifa: String?
 )
 
 enum class EnumRegionModel(val value: String) {

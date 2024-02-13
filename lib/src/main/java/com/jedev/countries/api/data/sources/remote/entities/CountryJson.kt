@@ -29,7 +29,7 @@ data class CountryJsonRes (
     @SerializedName("population")
     val population: Long,
     @SerializedName("currencies")
-    val currencies: Map<String, CurrencyResJson?>? = null,
+    val currencies: Map<String, CurrencyResJson>? = null,
     @SerializedName("maps")
     val maps: MapsResJson,
     @SerializedName("fifa")
