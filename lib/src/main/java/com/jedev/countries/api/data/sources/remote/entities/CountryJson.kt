@@ -101,7 +101,7 @@ data class CurrencyResJson (
     @SerializedName("name")
     val name: String,
     @SerializedName("symbol")
-    val symbol: String
+    val symbol: String?
 )
 
 data class FlagsResJson (
