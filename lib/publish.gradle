@@ -2,7 +2,7 @@ apply plugin: 'maven-publish'
 
 def getGroupId = 'com.jedev'
 def getArtifactId = "countries-api"
-def getVersionName = "0.0.6"
+def getVersionName = "0.0.7"
 
 afterEvaluate {
     publishing {
