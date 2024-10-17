@@ -1,6 +1,6 @@
 package com.jedev.countries.api.models
 
-enum class EnumContinentModel(val value: String) {
+enum class EnumContinent(val value: String) {
     Africa("Africa"),
     Antarctica("Antarctica"),
     Asia("Asia"),

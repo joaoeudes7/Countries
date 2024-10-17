@@ -1,6 +1,6 @@
 package com.jedev.countries.api.models
 
-data class TranslationModel (
+data class Translation (
     val official: String,
     val common: String
 )

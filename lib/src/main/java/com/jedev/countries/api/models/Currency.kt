@@ -1,6 +1,6 @@
 package com.jedev.countries.api.models
 
-class CurrencyModel(
+class Currency(
     val name: String,
     val symbol: String?
 )
